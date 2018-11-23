@@ -20,7 +20,7 @@ client.on('guildMemberRemove', member => {
         .setDescription(`**مع السلامه تشرفنا بك ✋😔**`)
         .addField('👤   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
         .setColor('RED')
-        .setFooter(`**== نـتـمـنـآ لـكـم آسـتـمــتـآع ==**`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
+        .setFooter(`- نـتـمـنـآ لـكـم آسـتـمــتـآع -`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
    
     var channel =member.guild.channels.find('name', 'chat')
     if (!channel) return;
