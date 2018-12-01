@@ -18,7 +18,7 @@ client.on('ready', () => {
  /////////////////////////////////////////////وامر عامه
 
 client.on('message' , message => {
-if(message.content === '%help') {
+if(message.content === '*help') {
   var EsTeKnAN = new Discord.RichEmbed()
   .setColor('RANDOM')
 message.author.send(`
@@ -26,20 +26,20 @@ message.author.send(`
 **
 [❖─═════ {✯ :globe_with_meridians: الأوامر العامه ✯} ═════─❖]
 اذا منشنت البوت يرد عليك ➥: منشن البوت
-%ping :➥ لمعرفة سرعة استجابة البوت في الوقت الحالي
-%server :➥ يعرض معلومات السيرفر
-%id :➥ يعرض معلوماتك
-%image :➥ يعرض صورت السيرفر
-%avatar :➥ يظهر صورة بروفايلك
-%new :➥ امر فتح  تذكرة
+*ping :➥ لمعرفة سرعة استجابة البوت في الوقت الحالي
+*server :➥ يعرض معلومات السيرفر
+*id :➥ يعرض معلوماتك
+*image :➥ يعرض صورت السيرفر
+*avatar :➥ يظهر صورة بروفايلك
+*new :➥ امر فتح  تذكرة
 [❖─═════ {✯ :radioactive: اوامر الاداره ✯} ═════─❖]
-%bc :➥ برودكاست مطور
-يقفل الشات ➥: %قفل
-يفتح الشات ➥: %فتح
-يمسح الشات ➥: %مسح
-امر الباند ➥: %باند
-لاعطاء ميوت كتابي وصوتي لشخص ➥: %اسكت
-لفك الميوت الكتابي و الصوتي عن الشخص ➥: %تكلم
+*bc :➥ برودكاست مطور
+يقفل الشات ➥: *قفل
+يفتح الشات ➥: *فتح
+يمسح الشات ➥: *مسح
+امر الباند ➥: *باند
+لاعطاء ميوت كتابي وصوتي لشخص ➥: *اسكت
+لفك الميوت الكتابي و الصوتي عن الشخص ➥: *تكلم
 [❖─═════ {✯ :tools: البوت مازال تحت التطوير ✯} ═════─❖]
 **
 `);
@@ -58,7 +58,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : i1Suhaib ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`%help | By ezoo_kik`,"http://twitch.tv/S-F")
+client.user.setGame(`*help | By ezoo_kik`,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 
@@ -67,7 +67,7 @@ client.user.setStatus("dnd")
 
 
 client.on('message', message => {
-            if (message.content.startsWith("%help")) {
+            if (message.content.startsWith("*help")) {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField('     Help ' ,' **تم ارسال الاوامر الي الخاص ✉**')
@@ -79,7 +79,7 @@ client.on('message', message => {
 
 
 client.on('message', function(msg) {
-    const prefix = '%'
+    const prefix = '*'
     if(msg.content.startsWith (prefix  + 'server')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
@@ -102,7 +102,7 @@ client.on('message', function(msg) {
 
 
 client.on("message", message => {
-    const prefix = "%"
+    const prefix = "*"
               
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -147,7 +147,7 @@ client.on('message', message => {
 
 
 client.on("message", msg => {
-  if(msg.content === '%' + "id") {
+  if(msg.content === '*' + "id") {
       const embed = new Discord.RichEmbed();
   embed.addField("🔱| اسم الحساب :", `${msg.author.username}#${msg.author.discriminator}`, true)
           .addField("🆔| الاي دي :", `${msg.author.id}`, true)
@@ -168,7 +168,7 @@ client.on("message", msg => {
 
 client.on("message", (message) => {
     /// ALPHA CODES
-   if (message.content.startsWith("%new")) {     /// ALPHA CODES
+   if (message.content.startsWith("*new")) {     /// ALPHA CODES
         const reason = message.content.split(" ").slice(1).join(" ");     /// ALPHA CODES
         if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(`This server doesn't have a \`Support Team\` role made, so the ticket won't be opened.\nIf you are an administrator, make one with that name exactly and give it to users that should be able to see tickets.`);
         if (message.guild.channels.exists("name", "ticket-{message.author.id}" + message.author.id)) return message.channel.send(`You already have a ticket open.`);    /// ALPHA CODES
@@ -199,12 +199,12 @@ client.on("message", (message) => {
     }
  
  
-  if (message.content.startsWith("%close")) {
+  if (message.content.startsWith("*close")) {
         if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
  
         message.channel.send(`هل أنت متأكد؟ بعد التأكيد ، لا يمكنك عكس هذا الإجراء!\n للتأكيد ، اكتب\`%close\`. سيؤدي ذلك إلى مهلة زمنية في غضون 10 ثوانٍ وإلغائها`)
             .then((m) => {
-                message.channel.awaitMessages(response => response.content === '%close', {
+                message.channel.awaitMessages(response => response.content === '*close', {
                         max: 1,
                         time: 10000,
                         errors: ['time'],
@@ -225,7 +225,7 @@ client.on("message", (message) => {
 
 
 client.on('message' , message => {
-  var prefix = "%";
+  var prefix = "*";
   if(message.author.bot) return;
   if(message.content.startsWith(prefix + "ping")) {
  message.channel.send('Pong...').then((msg) => {
@@ -245,7 +245,7 @@ client.on('message' , message => {
 
 
 client.on("message", message => {
-var prefix = "%" // البريفكس
+var prefix = "*" // البريفكس
     var args = message.content.substring(prefix.length).split(" ");
     if (message.content.startsWith(prefix + "مسح")) { // الامر
         if(!message.channel.guild) return message.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
@@ -271,7 +271,7 @@ footer: {
 
 client.on('message', message => {
 
-    if (message.content === "%قفل") {
+    if (message.content === "*قفل") {
                         if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
@@ -279,10 +279,10 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
          SEND_MESSAGES: false
 
            }).then(() => {
-               message.reply("تم تقفيل الشات ✅ ")
+               message.reply("تم تقفيل الشات ياعزوز ✅ ")
            });
              }
-if (message.content === "%فتح") {
+if (message.content === "*فتح") {
     if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
@@ -290,7 +290,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
          SEND_MESSAGES: true
 
            }).then(() => {
-               message.reply("تم فتح الشات ✅")
+               message.reply(" تم فتح الشات ياعزوز ✅")
            });
              }
 
@@ -301,7 +301,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
 
 
 client.on('message', message => {
-    var prefix = "%";
+    var prefix = "*";
           if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
@@ -344,7 +344,7 @@ client.on("message", message => {
     
     let command = message.content.split(" ")[0];
     
-    if (command === "%اسكت") {
+    if (command === "*اسكت") {
           if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
     let user = message.mentions.users.first();
     let modlog = client.channels.find('name', 'log');
@@ -380,7 +380,7 @@ client.on("message", message => {
     
     let command = message.content.split(" ")[0];
     
-    if (command === "%تكلم") {
+    if (command === "*تكلم") {
           if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
     let user = message.mentions.users.first();
     let modlog = client.channels.find('name', 'log');
@@ -424,7 +424,7 @@ client.on("message", message => {
 client.on('message', message => {
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('%bcc')){
+if (message.content.startsWith('*bcc')){
  if (message.author.id !== '387107653148475393') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
 message.channel.sendMessage('جار ارسال الرسالة |✅')
 client.users.forEach(m =>{
@@ -469,11 +469,11 @@ msg.reply('**ۏ؏ــڷــﯧْۧــڬــمۭ ۛ ּا̍ڶــڛۣــﻼ̍ۙ�
 
 
 client.on("guildMemberAdd", member => { 
-        if(member.guild.id === "509664713617965087") { 
+        if(member.guild.id === "499971880401371137") { 
 setTimeout(function(){ 
-  const channel = member.guild.channels.find('id', '509665635270393857');  
+  const channel = member.guild.channels.find('id', '499974826430038016');  
 if (!channel) return; 
-  channel.send(`**Welcome To [__Kings Shop__]:shopping_cart:** ❤️ , ${member}`) 
+  channel.send(`**Welcome To 『Pro | Gamer』:progamer: ** ❤️ , ${member}`) 
 }, 5000);  
 }});  
 
@@ -592,10 +592,10 @@ client.on("guildMemberAdd", member => {
         .setTitle(`**الله معاك ✋ 😔**`)
         .setDescription(`**مع السلامه تشرفنا بك ✋😔**`)
         .addField('👤   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
-        .setColor('RED')
-        .setFooter(`- نـتـمـنـآ لـكـم آسـتـمــتـآع -`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
+        .setColor('blue')
+        .setFooter(`- نـتـمـنـآ لـكـم آسـتـمــتـآع -`, 'https://cdn.discordapp.com/attachments/518120728977997826/518339921493360640/c86f9d3c8e191f151b4ab2cb94523e23.jpg')
    
-    var channel =member.guild.channels.find('name', 'chat')
+    var channel =member.guild.channels.find('name', '💟𝕎𝔼𝕃ℂ𝕆𝕄𝔼💟')
     if (!channel) return;
     channel.send({embed : embed});
     })
