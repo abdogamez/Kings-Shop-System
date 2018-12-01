@@ -473,7 +473,7 @@ client.on("guildMemberAdd", member => {
 setTimeout(function(){ 
   const channel = member.guild.channels.find('id', '499974826430038016');  
 if (!channel) return; 
-  channel.send(`**Welcome To 『Pro | Gamer』:progamer: ** ❤️ , ${member}`) 
+  channel.send(`** Welcome To 『Pro | Gamer』 ** ❤️ , ${member}`) 
 }, 5000);  
 }});  
 
@@ -499,7 +499,7 @@ client.on('guildMemberAdd', member => {
     invites[member.guild.id] = guildInvites;
     const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
     const inviter = client.users.get(invite.inviter.id);
-    const logChannel = member.guild.channels.find(channel => channel.name === "chat");
+    const logChannel = member.guild.channels.find(channel => channel.name === "💟𝕎𝔼𝕃ℂ𝕆𝕄𝔼💟");
     logChannel.send(`${member} **Invited by:** <@${inviter.id}>`);
   });
 });
@@ -589,9 +589,9 @@ client.on("guildMemberAdd", member => {
         var embed = new Discord.RichEmbed()
         .setAuthor(member.user.username, member.user.avatarURL)
         .setThumbnail(member.user.avatarURL)
-        .setTitle(`**الله معاك ✋ 😔**`)
+        .setTitle(`**بــــاي ✋ 😔**`)
         .setDescription(`**مع السلامه تشرفنا بك ✋😔**`)
-        .addField('👤   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
+        .addField('👤   بقى من الاعضـاء',`**[ ${member.guild.memberCount} ]**`,true)
         .setColor('blue')
         .setFooter(`- نـتـمـنـآ لـكـم آسـتـمــتـآع -`, 'https://cdn.discordapp.com/attachments/518120728977997826/518339921493360640/c86f9d3c8e191f151b4ab2cb94523e23.jpg')
    
