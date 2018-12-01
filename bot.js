@@ -123,7 +123,7 @@ client.on("message", message => {
 
 
 client.on('message', message => {
-    if (message.content.startsWith("%avatar")) {
+    if (message.content.startsWith("*avatar")) {
         if (message.author.bot) return
         var mentionned = message.mentions.users.first();
     var omar;
@@ -190,7 +190,7 @@ client.on("message", (message) => {
             message.channel.send(`:white_check_mark: **تم إنشاء تذكرتك ، #${c.name}.**`);
             const embed = new Discord.RichEmbed()
                 .setColor(0xCF40FA)
-                .addField(`مرحباّ ${message.author.username}!`, `يرجي شرح سبب فتح هذا التذكرة . سيكون فريق الدعم لدينا قريبا للمساعدة`)
+                .addField(`مرحباّ ${message.author.username}!`, `يرجي شرح سبب فتح هذا التذكرة . دقائق ويرد عليــــك اونر السيرفر`)
                 .setTimestamp();
             c.send({
                 embed: embed
@@ -516,11 +516,11 @@ client.on('message', message => {
     if (message.content.includes('discord.gg')){
                         if(!message.channel.guild) return message.reply ('')
                     if (!message.member.hasPermissions(['MANAGE_MESSAGES'])){
-       message.channel.send('ban <@' + message.author.id + '>')
+       message.channel.send('*باند <@' + message.author.id + '>')
        message.delete() 
        }
     }
-          if (message.content.startsWith("ban ")) {
+          if (message.content.startsWith("*باند ")) {
              if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply();
              var member= message.mentions.members.first();
              member.ban().then((member) => {
