@@ -279,7 +279,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
          SEND_MESSAGES: false
 
            }).then(() => {
-               message.reply("تم تقفيل الشات ياعزوز ✅ ")
+               message.reply("تم تقفيل الشات ياحبـــــي ✅ ")
            });
              }
 if (message.content === "*فتح") {
@@ -290,7 +290,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
          SEND_MESSAGES: true
 
            }).then(() => {
-               message.reply(" تم فتح الشات ياعزوز ✅")
+               message.reply(" تم فتح الشات ياحبـــــي ✅")
            });
              }
 
