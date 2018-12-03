@@ -33,7 +33,7 @@ message.author.send(`
 *avatar :➥ يظهر صورة بروفايلك
 *new :➥ امر فتح  تذكرة
 By : ezoo kik:➥ مصمم البـوت 
-https://discord.gg/8x6vwm3:سيرفر مصمم البـوت   
+https://discord.gg/8x6vwm3 :   سيرفر مصمم البـوت   
 [❖─═════ {✯ :radioactive: اوامر الاداره ✯} ═════─❖]
 *bc :➥ برودكاست مطور
 يقفل الشات ➥: *قفل
